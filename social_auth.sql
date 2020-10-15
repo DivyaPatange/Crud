@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Oct 15, 2020 at 03:36 AM
+-- Generation Time: Oct 15, 2020 at 03:44 AM
 -- Server version: 5.7.26
 -- PHP Version: 7.2.18
 
@@ -35,7 +35,15 @@ CREATE TABLE IF NOT EXISTS `categories` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `categories`
+--
+
+INSERT INTO `categories` (`id`, `category_name`, `created_at`, `updated_at`) VALUES
+(4, 'Indian', '2020-10-14 22:12:14', '2020-10-14 22:12:14'),
+(5, 'Western', '2020-10-14 22:12:21', '2020-10-14 22:12:21');
 
 -- --------------------------------------------------------
 
@@ -113,7 +121,15 @@ CREATE TABLE IF NOT EXISTS `products` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `products`
+--
+
+INSERT INTO `products` (`id`, `product_name`, `product_price`, `size`, `stock`, `product_description`, `category`, `created_at`, `updated_at`) VALUES
+(1, 'Kurti', '200', 1, '100', 'This is an indian outfit.', 4, '2020-10-14 22:13:09', '2020-10-14 22:13:09'),
+(2, 'T-shirt', '300', 2, '150', 'T-shirt', 5, '2020-10-14 22:14:05', '2020-10-14 22:14:05');
 
 -- --------------------------------------------------------
 
@@ -128,7 +144,16 @@ CREATE TABLE IF NOT EXISTS `sizes` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `sizes`
+--
+
+INSERT INTO `sizes` (`id`, `size`, `created_at`, `updated_at`) VALUES
+(1, 'S', '2020-10-14 22:11:47', '2020-10-14 22:11:47'),
+(2, 'M', '2020-10-14 22:11:52', '2020-10-14 22:11:52'),
+(3, 'L', '2020-10-14 22:11:57', '2020-10-14 22:11:57');
 
 -- --------------------------------------------------------
 
